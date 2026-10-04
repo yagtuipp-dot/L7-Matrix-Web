@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d16">
+<title>L7 MATRIX SA Bridge V1.1</title>
+<style>
+body{margin:0;background:#070b12;color:#f7f9ff;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC",sans-serif}
+main{max-width:430px;margin:auto;padding:40px 20px}
+.card{background:#111824;border:1px solid #ffffff18;border-radius:22px;padding:22px;margin:18px 0}
+h1{margin:0 0 8px}p,li{color:#9aa6b8;line-height:1.65;font-size:14px}
+code{display:block;background:#05080d;border:1px solid #ffffff12;padding:12px;border-radius:12px;word-break:break-all;font-size:10px;color:#dbe5ff}
+button{width:100%;padding:14px;border:0;border-radius:13px;background:linear-gradient(100deg,#ff641e,#168aff);color:#fff;font-weight:800;margin-top:10px}
+.small{font-size:11px;color:#66758b}
+</style>
+</head>
+<body><main>
+<h1>L7 MATRIX</h1>
+<div class="small">SA BRIDGE · V1.1</div>
+
+<div class="card">
+<h2>手機測試流程</h2>
+<ol>
+<li>先在 Safari 正常登入 AU8，進入 SA 百家樂房間。</li>
+<li>建立一個 Safari 書籤。</li>
+<li>編輯該書籤，把「網址」整段換成下面的短版載入器。</li>
+<li>回到 SA 頁面，點那個書籤。</li>
+<li>如果成功，L7 MATRIX 浮窗會直接出現在 SA 頁面。</li>
+</ol>
+<p class="small">這不是跨站讀取帳號或密碼；Reader 只處理目前頁面已經渲染出的遊戲 DOM。</p>
+</div>
+
+<div class="card">
+<h2>短版載入器</h2>
+<code id="loader">javascript:(()=&gt;{if(window.__L7SA_BRIDGE)return;window.__L7SA_BRIDGE=1;const s=document.createElement(&#x27;script&#x27;);s.src=&#x27;https://yagtuipp-dot.github.io/L7-Matrix-Web/l7reader.js?v=&#x27;+Date.now();s.onload=()=&gt;alert(&#x27;L7 MATRIX 已啟動&#x27;);s.onerror=()=&gt;alert(&#x27;L7 Reader 載入失敗，可能是平台安全政策阻擋。&#x27;);document.documentElement.appendChild(s)})();</code>
+<button onclick="navigator.clipboard?.writeText(document.getElementById('loader').innerText)">複製載入器</button>
+</div>
+
+<div class="card">
+<h2>如果短版被擋</h2>
+<p>改用完整內嵌版。它不需要再從 GitHub 載入 Reader，但 Safari 書籤網址會比較長。</p>
+<p class="small">完整版本已放在 L7_SA_BOOKMARKLET.txt。</p>
+</div>
+</main></body></html>
