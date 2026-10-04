@@ -1,0 +1,21 @@
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Noto Sans TC",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#050a12;color:#fff}
+body{min-height:100dvh}.screen{min-height:100dvh;position:relative;overflow:hidden}
+.hidden{display:none!important}.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:#1266ff33;filter:blur(70px);top:-160px;left:50%;transform:translateX(-50%)}
+.card{position:relative}.login-card{min-height:100dvh;padding:20vh 28px 40px;max-width:520px;margin:auto}
+.logo{font-size:76px;font-weight:900;letter-spacing:-5px}.matrix{font-size:27px;font-weight:800;letter-spacing:10px;margin-top:-7px}
+.sub{font-size:11px;letter-spacing:2.6px;color:#8290a5;margin:8px 0 54px}
+label{display:block;font-size:12px;color:#9aa7ba;margin-bottom:9px}
+input{width:100%;height:58px;border:1px solid #26364d;border-radius:16px;background:#0b1524;color:#fff;padding:0 17px;font-size:16px;outline:none}
+input:focus{border-color:#638cff;box-shadow:0 0 0 3px #4777ff20}
+button{border:0;color:#fff;font:inherit;cursor:pointer}
+#loginBtn{width:100%;height:58px;border-radius:16px;background:#fff;color:#07101d;font-weight:800;margin-top:14px}
+.hint{font-size:12px;color:#758399;text-align:center;margin-top:20px}.error{color:#ff7185;text-align:center;font-size:13px}
+header{height:84px;padding:env(safe-area-inset-top) 20px 0;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #172235;background:#07101dcc}
+header b{display:block;font-size:17px}header small{color:#718096}.ghost{background:#152033;padding:9px 13px;border-radius:10px}
+.content{padding:32px 20px;max-width:620px;margin:auto}h1{font-size:30px;margin:0 0 8px}.muted{color:#8290a5;margin:0 0 28px;line-height:1.5}
+.platform{width:100%;display:flex;align-items:center;text-align:left;padding:18px;border:1px solid #1b2a40;border-radius:22px;background:linear-gradient(135deg,#0d1828,#0a1220);box-shadow:0 18px 50px #0006}
+.platform-logo{width:64px;height:64px;border-radius:17px;background:#15233a;display:grid;place-items:center;font-weight:900;margin-right:16px}
+.platform b{display:block;font-size:20px}.platform small{display:block;color:#7f8da3;margin-top:5px}.arrow{font-size:36px;margin-left:auto;color:#74839a}
+.notice{margin-top:22px;border:1px solid #17263b;border-radius:18px;padding:18px;background:#0a1422}.notice p{color:#7f8da3;font-size:13px;line-height:1.6;margin-bottom:0}
+@media(min-width:700px){.login-card{padding-top:16vh}}
