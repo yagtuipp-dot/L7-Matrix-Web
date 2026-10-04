@@ -4,6 +4,5 @@
   "start_url": "./",
   "display": "standalone",
   "background_color": "#050a12",
-  "theme_color": "#07111f",
-  "description": "L7 MATRIX mobile web prototype"
+  "theme_color": "#07111f"
 }

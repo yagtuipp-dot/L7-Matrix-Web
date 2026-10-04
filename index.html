@@ -1,53 +1,44 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-  <meta name="theme-color" content="#07111f">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="L7 MATRIX">
-  <title>L7 MATRIX</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="icon.svg">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="L7 MATRIX">
+<title>L7 MATRIX V0.2</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main id="app">
-    <section id="login" class="screen">
-      <div class="glow"></div>
-      <div class="card login-card">
-        <div class="logo">L7</div>
-        <div class="matrix">MATRIX</div>
-        <div class="sub">MOBILE ANALYZER ACCESS</div>
-        <label for="code">授權序號</label>
-        <input id="code" autocomplete="off" placeholder="輸入測試序號">
-        <button id="loginBtn">進入 L7 MATRIX</button>
-        <p class="hint">V0.1 測試碼：<b>L7TEST</b></p>
-        <p id="error" class="error"></p>
-      </div>
-    </section>
+<div id="login" class="page">
+  <div class="login">
+    <div class="logo">L7</div><div class="matrix">MATRIX</div>
+    <div class="sub">MOBILE WEB DIAGNOSTIC V0.2</div>
+    <input id="code" placeholder="輸入測試序號" autocomplete="off">
+    <button id="enter">進入 L7 MATRIX</button>
+    <p class="hint">測試碼：L7TEST</p><p id="err"></p>
+  </div>
+</div>
 
-    <section id="platforms" class="screen hidden">
-      <header>
-        <div><b>L7 MATRIX</b><small>合作平台</small></div>
-        <button class="ghost" id="logoutBtn">登出</button>
-      </header>
-      <div class="content">
-        <h1>選擇平台</h1>
-        <p class="muted">第一階段先驗證 iPhone → AU8 手機站流程。</p>
-        <button class="platform" id="au8Btn">
-          <span class="platform-logo">AU8</span>
-          <span><b>AU8</b><small>使用平台原本登入頁面</small></span>
-          <span class="arrow">›</span>
-        </button>
-        <div class="notice">
-          <b>測試重點</b>
-          <p>確認 Safari/PWA 可正常開啟 AU8、登入並進入後續遊戲頁面。</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script src="app.js"></script>
-</body>
-</html>
+<div id="main" class="page hide">
+  <header><b>L7 MATRIX</b><span>V0.2 診斷模式</span></header>
+  <section class="panel">
+    <h2>AU8 內嵌測試</h2>
+    <p>這版先測試 AU8 是否允許在 L7 MATRIX 頁面內載入。</p>
+    <div class="status"><b id="state">尚未開始</b><small id="detail">按下方按鈕開始測試</small></div>
+    <button id="embed">在 L7 MATRIX 內開啟 AU8</button>
+    <button id="normal" class="secondary">一般方式開啟 AU8</button>
+  </section>
+  <section id="frameWrap" class="frameWrap hide">
+    <div class="frameTop"><span>AU8 EMBED TEST</span><button id="close">關閉</button></div>
+    <iframe id="gameFrame" title="AU8 test"></iframe>
+  </section>
+  <section class="notes">
+    <b>判讀方式</b>
+    <p>若下方能顯示 AU8 首頁並可操作，代表「內嵌」第一關通過。若空白、拒絕連線或自動跳出，代表網站有跨站/框架限制。</p>
+  </section>
+</div>
+<script src="app.js"></script>
+</body></html>

@@ -1,9 +1,4 @@
-# L7 MATRIX Web V0.1
-
-PWA prototype for iPhone testing.
-
-Test access code: `L7TEST`
-
-Flow: L7 MATRIX → access code → platform selection → AU8 mobile site.
-
-This prototype intentionally opens AU8's normal mobile URL rather than storing platform credentials.
+# L7 MATRIX Web V0.2
+iPhone cross-origin/embed feasibility diagnostic.
+Test code: `L7TEST`.
+This version does not read credentials, place bets, or automate gameplay.
